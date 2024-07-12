@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2024/07/11 22:02:43.639,=C:\Users\alydo\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/07/11 23:28:03.681,C:\Users\alydo\OneDrive\Documentos\GitHub\Monolito\unitPrincipal.pas=C:\Users\alydo\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/07/11 23:28:03.681,C:\Users\alydo\OneDrive\Documentos\GitHub\Monolito\unitPrincipal.dfm=C:\Users\alydo\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/07/11 23:28:10.275,C:\Users\alydo\OneDrive\Documentos\GitHub\Monolito\Monolito.dproj=C:\Users\alydo\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
