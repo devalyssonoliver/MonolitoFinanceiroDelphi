@@ -9,7 +9,7 @@ uses
   Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus, Vcl.RibbonActnMenus,
   System.Actions, Vcl.ActnList, Vcl.RibbonSilverStyleActnCtrls, Vcl.ExtCtrls,
   Vcl.RibbonObsidianStyleActnCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.Menus,
-  Vcl.Imaging.pngimage;
+  Vcl.Imaging.pngimage, Unit2;
 
 type
   TForm1 = class(TForm)
@@ -18,10 +18,10 @@ type
     ImageList: TImageList;
     LogoIcon: TRibbonApplicationMenuBar;
     RibbonPage: TRibbonPage;
-    RibbonGroup1: TRibbonGroup;
-    lb_clientes: TLabel;
-    shapbtn: TShape;
-    img_cliente: TImage;
+    rb_clientes: TRibbonGroup;
+    SpeedButton1: TSpeedButton;
+    procedure SpeedButton1Click(Sender: TObject);
+
 
 
 
@@ -44,5 +44,12 @@ implementation
 
 
 
+
+
+
+procedure TForm1.SpeedButton1Click(Sender: TObject);
+begin
+    Frm_Clientes.Show;
+end;
 
 end.
