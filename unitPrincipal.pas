@@ -9,7 +9,7 @@ uses
   Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus, Vcl.RibbonActnMenus,
   System.Actions, Vcl.ActnList, Vcl.RibbonSilverStyleActnCtrls, Vcl.ExtCtrls,
   Vcl.RibbonObsidianStyleActnCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.Menus,
-  Vcl.Imaging.pngimage, Unit2;
+  Vcl.Imaging.pngimage, uClientes;
 
 type
   TForm1 = class(TForm)

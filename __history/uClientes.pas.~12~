@@ -1,0 +1,90 @@
+unit uClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.WinXPanels, Vcl.ExtCtrls,
+  Vcl.StdCtrls, Vcl.Imaging.pngimage, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  System.ImageList, Vcl.ImgList, Vcl.WinXCalendars;
+
+type
+  TFrm_Clientes = class(TForm)
+    pnl_Principal: TCardPanel;
+    card_Cadastrar: TCard;
+    card_Localizar: TCard;
+    pnl_buscar: TPanel;
+    pnl_button: TPanel;
+    pnl_grid: TPanel;
+    logo_prod: TImage;
+    DBGrid1: TDBGrid;
+    ImageList: TImageList;
+    shp_novo: TShape;
+    shp_exibir: TShape;
+    Image1: TImage;
+    img_exibir: TImage;
+    img_excluir: TImage;
+    shp_excluir: TShape;
+    shp_fechar: TShape;
+    img_fechar: TImage;
+    shp_imprimir: TShape;
+    Image2: TImage;
+    Label6: TLabel;
+    Panel1: TPanel;
+    procedure shp_novoMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure shp_novoMouseLeave(Sender: TObject);
+    procedure shp_fecharMouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure shp_fecharMouseLeave(Sender: TObject);
+
+
+
+
+
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_Clientes: TFrm_Clientes;
+
+implementation
+
+{$R *.dfm}
+
+
+
+procedure TFrm_Clientes.shp_fecharMouseLeave(Sender: TObject);
+begin
+     shp_fechar.Pen.Style := psClear;
+end;
+
+procedure TFrm_Clientes.shp_fecharMouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+    shp_fechar.Pen.Style := psSolid;
+    shp_fechar.Pen.Width := 1;
+    shp_fechar.Pen.Color := clBackground;
+end;
+
+procedure TFrm_Clientes.shp_novoMouseLeave(Sender: TObject);
+begin
+     shp_novo.Pen.Style := psClear;
+end;
+
+procedure TFrm_Clientes.shp_novoMouseMove(Sender: TObject; Shift: TShiftState;
+  X, Y: Integer);
+begin
+    shp_novo.Pen.Style := psSolid;
+    shp_novo.Pen.Width := 1;
+    shp_novo.Pen.Color := clBackground;
+
+end;
+
+end. como posso melhorar o codigo
+
+
