@@ -49,7 +49,7 @@ implementation
 
 procedure TForm1.SpeedButton1Click(Sender: TObject);
 begin
-    Frm_Clientes.Show;
+    frmClientes.Show;
 end;
 
 end.

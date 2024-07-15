@@ -1437,7 +1437,6 @@ object Form1: TForm1
         Caption = 'Cadastros'
         Page = RibbonPage
       end>
-    ExplicitWidth = 999
     DesignSize = (
       1003
       143)

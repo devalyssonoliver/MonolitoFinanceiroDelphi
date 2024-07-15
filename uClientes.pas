@@ -1,15 +1,16 @@
-                                           unit uClientes;
+ unit uClientes;
 
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.WinXPanels, Vcl.ExtCtrls,
-  Vcl.StdCtrls, Vcl.Imaging.pngimage, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  System.ImageList, Vcl.ImgList, Vcl.WinXCalendars, PraButtonStyle;
+    Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+    Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.WinXPanels, Vcl.ExtCtrls,
+    Vcl.StdCtrls, Vcl.Imaging.pngimage, Data.DB, Vcl.Grids, Vcl.DBGrids,
+    System.ImageList, Vcl.ImgList, Vcl.WinXCalendars, PraButtonStyle, Vcl.JumpList,
+    Vcl.ControlList, Vcl.CustomizeDlg;
 
 type
-  TFrm_Clientes = class(TForm)
+  TfrmClientes = class(TForm)
     pnl_Principal: TCardPanel;
     card_Cadastrar: TCard;
     card_Localizar: TCard;
@@ -20,8 +21,16 @@ type
     DBGrid1: TDBGrid;
     ImageList: TImageList;
     Label6: TLabel;
-    Panel1: TPanel;
-    btn_novo: TPraButtonStyle;
+    pnlPesquisar: TPanel;
+    btnNovo: TPraButtonStyle;
+    editPsq: TEdit;
+    btnExibir: TPraButtonStyle;
+    PraButtonStyle2: TPraButtonStyle;
+    PraButtonStyle3: TPraButtonStyle;
+    Splitter1: TSplitter;
+
+
+
 
     // Private declarations
   public
@@ -29,11 +38,18 @@ type
   end;
 
 var
-  Frm_Clientes: TFrm_Clientes;
+  frmClientes: TfrmClientes;
 
 implementation
 
 {$R *.dfm}
+
+
+
+
+
+
+
 
 end.
 
