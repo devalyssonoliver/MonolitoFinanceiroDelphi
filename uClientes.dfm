@@ -534,6 +534,7 @@ object frmClientes: TfrmClientes
           Width = 974
           Height = 478
           Align = alClient
+          DataSource = dtSource
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
@@ -1612,5 +1613,43 @@ object frmClientes: TfrmClientes
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000}
+  end
+  object dtSource: TDataSource
+    DataSet = DataModel.FDQuery1
+    Left = 680
+    Top = 452
+  end
+  object FDTable1: TFDTable
+    IndexFieldNames = 'id'
+    MasterSource = dtSource
+    Connection = DataModel.Con
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'clientes'
+    Left = 616
+    Top = 456
+    object FDTable1id: TIntegerField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDTable1nome: TWideStringField
+      FieldName = 'nome'
+      Origin = 'nome'
+      Size = 100
+    end
+    object FDTable1sobrenome: TWideStringField
+      FieldName = 'sobrenome'
+      Origin = 'sobrenome'
+      Size = 100
+    end
+    object FDTable1email: TWideStringField
+      FieldName = 'email'
+      Origin = 'email'
+      Size = 100
+    end
+    object FDTable1telefone: TWideStringField
+      FieldName = 'telefone'
+      Origin = 'telefone'
+    end
   end
 end

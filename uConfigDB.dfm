@@ -3,8 +3,8 @@ object frmConfigDB: TfrmConfigDB
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'Windows'
-  ClientHeight = 315
-  ClientWidth = 437
+  ClientHeight = 319
+  ClientWidth = 452
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,15 +18,13 @@ object frmConfigDB: TfrmConfigDB
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 431
+    Width = 446
     Height = 65
     Align = alTop
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 841
+    ExplicitWidth = 431
     object img_Top: TImage
       Left = 0
       Top = 0
@@ -109,18 +107,16 @@ object frmConfigDB: TfrmConfigDB
     end
   end
   object pnl_Center: TPanel
-    AlignWithMargins = True
-    Left = 3
-    Top = 74
-    Width = 431
-    Height = 238
+    Left = 0
+    Top = 71
+    Width = 452
+    Height = 248
     Align = alClient
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitWidth = 819
-    ExplicitHeight = 420
+    ExplicitLeft = 3
+    ExplicitTop = 74
     object lbName: TLabel
       Left = 24
       Top = 16
@@ -136,7 +132,7 @@ object frmConfigDB: TfrmConfigDB
     end
     object lbIp: TLabel
       Left = 24
-      Top = 48
+      Top = 61
       Width = 65
       Height = 15
       Caption = 'Endere'#231'o Ip '
@@ -149,7 +145,7 @@ object frmConfigDB: TfrmConfigDB
     end
     object lbPorta: TLabel
       Left = 310
-      Top = 95
+      Top = 111
       Width = 28
       Height = 15
       Caption = 'Porta'
@@ -163,7 +159,7 @@ object frmConfigDB: TfrmConfigDB
     object lb_User: TLabel
       Tag = 5
       Left = 24
-      Top = 95
+      Top = 111
       Width = 40
       Height = 15
       Hint = 'Digite o usu'#225'rio'
@@ -177,7 +173,7 @@ object frmConfigDB: TfrmConfigDB
     end
     object lbBase: TLabel
       Left = 245
-      Top = 48
+      Top = 61
       Width = 76
       Height = 15
       Caption = 'Base de Dados'
@@ -188,12 +184,13 @@ object frmConfigDB: TfrmConfigDB
       Font.Style = []
       ParentFont = False
     end
-    object PraButtonStyle1: TPraButtonStyle
+    object btn_Confirmar: TPraButtonStyle
       AlignWithMargins = True
       Left = 89
-      Top = 163
+      Top = 187
       Width = 113
       Height = 32
+      OnClick = btn_ConfirmarClick
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlightText
       Font.Height = -12
@@ -218,11 +215,11 @@ object frmConfigDB: TfrmConfigDB
       FontDisabled.Name = 'Tahoma'
       FontDisabled.Style = []
       Caption = 'Confirmar'
-      TabOrder = 2
+      TabOrder = 5
     end
-    object PraButtonStyle2: TPraButtonStyle
+    object btn_Cancelar: TPraButtonStyle
       Left = 208
-      Top = 163
+      Top = 187
       Width = 113
       Height = 32
       Font.Charset = DEFAULT_CHARSET
@@ -252,12 +249,12 @@ object frmConfigDB: TfrmConfigDB
       FontDisabled.Name = 'Tahoma'
       FontDisabled.Style = []
       Caption = 'Cancelar'
-      TabOrder = 0
+      TabOrder = 7
     end
     object lbSenha: TLabel
       Tag = 5
       Left = 167
-      Top = 95
+      Top = 111
       Width = 32
       Height = 15
       Hint = 'Digite a base de dados'
@@ -272,82 +269,79 @@ object frmConfigDB: TfrmConfigDB
     object pnl_spt: TPanel
       Left = 24
       Top = 41
-      Width = 777
-      Height = 1
+      Width = 392
+      Height = 3
+      BevelOuter = bvNone
+      Color = clBackground
+      ParentBackground = False
+      TabOrder = 0
+    end
+    object pnl_spt2: TPanel
+      AlignWithMargins = True
+      Left = 22
+      Top = 225
+      Width = 394
+      Height = 4
       BevelOuter = bvNone
       Color = clBackground
       ParentBackground = False
       TabOrder = 1
     end
-    object pnl_spt2: TPanel
-      AlignWithMargins = True
-      Left = 4
-      Top = 233
-      Width = 423
-      Height = 1
-      Align = alBottom
-      BevelOuter = bvNone
-      Color = clBackground
-      ParentBackground = False
-      TabOrder = 3
-      ExplicitLeft = 16
-      ExplicitTop = 415
-      ExplicitWidth = 799
-    end
     object EditIp: TEdit
       Tag = 5
       Left = 24
-      Top = 64
+      Top = 82
       Width = 215
-      Height = 25
+      Height = 23
       Hint = 'Digite o Endere'#231'o ip do servidor aqui. '
       BevelInner = bvNone
       BevelKind = bkSoft
-      BevelOuter = bvNone
-      TabOrder = 4
+      BevelOuter = bvSpace
+      Color = clWhite
+      TabOrder = 2
     end
     object editPort: TEdit
       Tag = 5
       Left = 310
-      Top = 116
+      Top = 132
       Width = 72
-      Height = 25
+      Height = 23
       Hint = 'Digite o Endere'#231'o ip do servidor aqui. '
       BevelInner = bvNone
       BevelKind = bkSoft
       BevelOuter = bvNone
-      TabOrder = 5
+      TabOrder = 3
     end
     object editUser: TEdit
       Tag = 5
       Left = 24
-      Top = 116
+      Top = 132
       Width = 137
-      Height = 25
+      Height = 23
       Hint = 'Digite o Endere'#231'o ip do servidor aqui. '
       BevelInner = bvNone
       BevelKind = bkSoft
-      BevelOuter = bvNone
-      TabOrder = 6
+      BevelOuter = bvSpace
+      TabOrder = 4
     end
     object editBase: TEdit
       Tag = 5
       Left = 245
-      Top = 64
+      Top = 82
       Width = 137
-      Height = 25
+      Height = 23
       Hint = 'Digite a base de dados'
       BevelInner = bvNone
-      BevelKind = bkSoft
-      BevelOuter = bvNone
-      TabOrder = 7
+      BevelKind = bkTile
+      BevelOuter = bvSpace
+      TabOrder = 6
     end
     object editSenha: TEdit
       Tag = 5
       Left = 167
-      Top = 116
+      Top = 132
       Width = 137
-      Height = 25
+      Height = 23
       Hint = 'Digite o Endere'#231'o ip do servidor aqui. '
       BevelInner = bvNone
       BevelKind = bkSoft
