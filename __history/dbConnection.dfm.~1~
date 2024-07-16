@@ -1,0 +1,4 @@
+object DbConexao: TDbConexao
+  Height = 297
+  Width = 278
+end

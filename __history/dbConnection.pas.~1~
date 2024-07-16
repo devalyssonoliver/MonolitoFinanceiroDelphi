@@ -1,0 +1,25 @@
+unit dbConnection;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TDbConexao = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DbConexao: TDbConexao;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.
