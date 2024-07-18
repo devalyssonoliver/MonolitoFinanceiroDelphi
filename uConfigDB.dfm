@@ -2,9 +2,9 @@ object frmConfigDB: TfrmConfigDB
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu]
-  Caption = 'Windows'
-  ClientHeight = 319
-  ClientWidth = 452
+  Caption = 'Configura'#231#245'es do Servidor'
+  ClientHeight = 309
+  ClientWidth = 423
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,18 +13,19 @@ object frmConfigDB: TfrmConfigDB
   Font.Style = []
   Position = poDesktopCenter
   StyleName = 'Windows'
+  OnCreate = FormCreate
   TextHeight = 15
   object pnl_Top: TPanel
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 446
+    Width = 417
     Height = 65
     Align = alTop
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 431
+    ExplicitWidth = 426
     object img_Top: TImage
       Left = 0
       Top = 0
@@ -109,14 +110,14 @@ object frmConfigDB: TfrmConfigDB
   object pnl_Center: TPanel
     Left = 0
     Top = 71
-    Width = 452
-    Height = 248
+    Width = 423
+    Height = 238
     Align = alClient
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 3
-    ExplicitTop = 74
+    ExplicitWidth = 432
+    ExplicitHeight = 242
     object lbName: TLabel
       Left = 24
       Top = 16
@@ -184,13 +185,13 @@ object frmConfigDB: TfrmConfigDB
       Font.Style = []
       ParentFont = False
     end
-    object btn_Confirmar: TPraButtonStyle
+    object btnConectar: TPraButtonStyle
       AlignWithMargins = True
-      Left = 89
+      Left = 31
       Top = 187
       Width = 113
       Height = 32
-      OnClick = btn_ConfirmarClick
+      OnClick = BtnConectarClick
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlightText
       Font.Height = -12
@@ -198,7 +199,7 @@ object frmConfigDB: TfrmConfigDB
       Font.Style = [fsBold]
       ParentFont = False
       Pen.Style = psClear
-      Brush.Color = clDodgerblue
+      Brush.Color = clLawngreen
       FontDown.Charset = DEFAULT_CHARSET
       FontDown.Color = clWindowText
       FontDown.Height = -12
@@ -214,42 +215,8 @@ object frmConfigDB: TfrmConfigDB
       FontDisabled.Height = -12
       FontDisabled.Name = 'Tahoma'
       FontDisabled.Style = []
-      Caption = 'Confirmar'
+      Caption = 'Conectar'
       TabOrder = 5
-    end
-    object btn_Cancelar: TPraButtonStyle
-      Left = 208
-      Top = 187
-      Width = 113
-      Height = 32
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clHighlightText
-      Font.Height = -12
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      ParentFont = False
-      Pen.Style = psClear
-      PenDown.Color = clHotLight
-      PenFocused.Color = clHotLight
-      PenDisabled.Style = psClear
-      Brush.Color = clSilver
-      FontDown.Charset = DEFAULT_CHARSET
-      FontDown.Color = clWindowText
-      FontDown.Height = -12
-      FontDown.Name = 'Tahoma'
-      FontDown.Style = []
-      FontFocused.Charset = DEFAULT_CHARSET
-      FontFocused.Color = clWindowText
-      FontFocused.Height = -12
-      FontFocused.Name = 'Tahoma'
-      FontFocused.Style = []
-      FontDisabled.Charset = DEFAULT_CHARSET
-      FontDisabled.Color = clWindowText
-      FontDisabled.Height = -12
-      FontDisabled.Name = 'Tahoma'
-      FontDisabled.Style = []
-      Caption = 'Cancelar'
-      TabOrder = 7
     end
     object lbSenha: TLabel
       Tag = 5
@@ -266,6 +233,73 @@ object frmConfigDB: TfrmConfigDB
       Font.Style = []
       ParentFont = False
     end
+    object btnSave: TPraButtonStyle
+      AlignWithMargins = True
+      Left = 150
+      Top = 187
+      Width = 113
+      Height = 32
+      OnClick = btnSaveClick
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clHighlightText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Pen.Style = psClear
+      Brush.Color = clDimgray
+      FontDown.Charset = DEFAULT_CHARSET
+      FontDown.Color = clWindowText
+      FontDown.Height = -12
+      FontDown.Name = 'Tahoma'
+      FontDown.Style = []
+      FontFocused.Charset = DEFAULT_CHARSET
+      FontFocused.Color = clWindowText
+      FontFocused.Height = -12
+      FontFocused.Name = 'Tahoma'
+      FontFocused.Style = []
+      FontDisabled.Charset = DEFAULT_CHARSET
+      FontDisabled.Color = clWindowText
+      FontDisabled.Height = -12
+      FontDisabled.Name = 'Tahoma'
+      FontDisabled.Style = []
+      Caption = 'Salvar'
+      TabOrder = 6
+    end
+    object btnEditar: TPraButtonStyle
+      AlignWithMargins = True
+      Left = 269
+      Top = 187
+      Width = 113
+      Height = 32
+      OnClick = btnEditarClick
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clHighlightText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Pen.Style = psClear
+      Brush.Color = clDarkgray
+      FontDown.Charset = DEFAULT_CHARSET
+      FontDown.Color = clWindowText
+      FontDown.Height = -12
+      FontDown.Name = 'Tahoma'
+      FontDown.Style = []
+      FontFocused.Charset = DEFAULT_CHARSET
+      FontFocused.Color = clWindowText
+      FontFocused.Height = -12
+      FontFocused.Name = 'Tahoma'
+      FontFocused.Style = []
+      FontDisabled.Charset = DEFAULT_CHARSET
+      FontDisabled.Color = clWindowText
+      FontDisabled.Height = -12
+      FontDisabled.Name = 'Tahoma'
+      FontDisabled.Style = []
+      Caption = 'Editar'
+      TabOrder = 7
+      TabStop = True
+    end
     object pnl_spt: TPanel
       Left = 24
       Top = 41
@@ -274,7 +308,7 @@ object frmConfigDB: TfrmConfigDB
       BevelOuter = bvNone
       Color = clBackground
       ParentBackground = False
-      TabOrder = 0
+      TabOrder = 8
     end
     object pnl_spt2: TPanel
       AlignWithMargins = True
@@ -285,7 +319,7 @@ object frmConfigDB: TfrmConfigDB
       BevelOuter = bvNone
       Color = clBackground
       ParentBackground = False
-      TabOrder = 1
+      TabOrder = 9
     end
     object EditIp: TEdit
       Tag = 5
@@ -298,7 +332,7 @@ object frmConfigDB: TfrmConfigDB
       BevelKind = bkSoft
       BevelOuter = bvSpace
       Color = clWhite
-      TabOrder = 2
+      TabOrder = 0
     end
     object editPort: TEdit
       Tag = 5
@@ -310,7 +344,8 @@ object frmConfigDB: TfrmConfigDB
       BevelInner = bvNone
       BevelKind = bkSoft
       BevelOuter = bvNone
-      TabOrder = 3
+      NumbersOnly = True
+      TabOrder = 4
     end
     object editUser: TEdit
       Tag = 5
@@ -322,7 +357,7 @@ object frmConfigDB: TfrmConfigDB
       BevelInner = bvNone
       BevelKind = bkSoft
       BevelOuter = bvSpace
-      TabOrder = 4
+      TabOrder = 2
     end
     object editBase: TEdit
       Tag = 5
@@ -334,7 +369,7 @@ object frmConfigDB: TfrmConfigDB
       BevelInner = bvNone
       BevelKind = bkTile
       BevelOuter = bvSpace
-      TabOrder = 6
+      TabOrder = 1
     end
     object editSenha: TEdit
       Tag = 5
@@ -346,7 +381,8 @@ object frmConfigDB: TfrmConfigDB
       BevelInner = bvNone
       BevelKind = bkSoft
       BevelOuter = bvNone
-      TabOrder = 8
+      PasswordChar = '*'
+      TabOrder = 3
     end
   end
 end

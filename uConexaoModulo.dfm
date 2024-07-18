@@ -1,12 +1,19 @@
 object DataModel: TDataModel
-  Height = 440
-  Width = 479
+  Height = 480
+  Width = 640
   object Con: TFDConnection
-    Left = 88
-    Top = 24
+    Params.Strings = (
+      'Database=base_delphi'
+      'User_Name=postgres'
+      'Password=postzeus2011'
+      'DriverID=PG')
+    Connected = True
+    Left = 176
+    Top = 120
   end
   object PGDriver: TFDPhysPgDriverLink
-    Left = 144
-    Top = 24
+    VendorHome = 'C:\'
+    Left = 240
+    Top = 120
   end
 end

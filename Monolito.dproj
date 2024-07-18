@@ -127,7 +127,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="unitPrincipal.pas">
-            <Form>Form1</Form>
+            <Form>frmPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uClientes.pas">
@@ -137,6 +137,11 @@
         <DCCReference Include="uConfigDB.pas">
             <Form>frmConfigDB</Form>
             <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uConexaoModulo.pas">
+            <Form>DataModel</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

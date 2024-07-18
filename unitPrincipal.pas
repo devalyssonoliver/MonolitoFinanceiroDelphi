@@ -12,7 +12,7 @@ uses
   Vcl.Imaging.pngimage, uClientes, PraButtonStyle, uConfigDB;
 
 type
-  TForm1 = class(TForm)
+  TfrmPrincipal = class(TForm)
     Ribbon1: TRibbon;
     ActionForRibbon: TActionManager;
     ImageList: TImageList;
@@ -25,10 +25,6 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure PraButtonStyle1Click(Sender: TObject);
 
-
-
-
-
   private
     { Private declarations }
   public
@@ -36,28 +32,21 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmPrincipal: TfrmPrincipal;
 
 implementation
 
 {$R *.dfm}
 
 
-
-
-
-
-
-
-
-procedure TForm1.PraButtonStyle1Click(Sender: TObject);
+procedure TfrmPrincipal.PraButtonStyle1Click(Sender: TObject);
 begin
     frmConfigDB.ShowModal;
 end;
 
-procedure TForm1.SpeedButton1Click(Sender: TObject);
+procedure TfrmPrincipal.SpeedButton1Click(Sender: TObject);
 begin
-    frmClientes.Show;
+    frmClientes.show;
 end;
 
 end.

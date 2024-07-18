@@ -1,4 +1,4 @@
-object Form1: TForm1
+object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Align = alLeft
@@ -1464,7 +1464,7 @@ object Form1: TForm1
         Caption = 'Clientes'
         GroupIndex = 0
         object SpeedButton1: TSpeedButton
-          Left = 0
+          Left = 3
           Top = 3
           Width = 98
           Height = 62
@@ -1474,7 +1474,7 @@ object Form1: TForm1
         end
       end
       object RibbonGroup1: TRibbonGroup
-        Left = 108
+        Left = 107
         Top = 3
         Width = 101
         Height = 86
