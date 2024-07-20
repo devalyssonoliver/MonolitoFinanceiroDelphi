@@ -9,7 +9,7 @@ uses
   Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus, Vcl.RibbonActnMenus,
   System.Actions, Vcl.ActnList, Vcl.RibbonSilverStyleActnCtrls, Vcl.ExtCtrls,
   Vcl.RibbonObsidianStyleActnCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.Menus,
-  Vcl.Imaging.pngimage, uClientes, PraButtonStyle, uConfigDB;
+  Vcl.Imaging.pngimage, uClientes, PraButtonStyle;
 
 type
   TfrmPrincipal = class(TForm)
@@ -20,10 +20,7 @@ type
     RibbonPage: TRibbonPage;
     rb_clientes: TRibbonGroup;
     SpeedButton1: TSpeedButton;
-    RibbonGroup1: TRibbonGroup;
-    PraButtonStyle1: TPraButtonStyle;
     procedure SpeedButton1Click(Sender: TObject);
-    procedure PraButtonStyle1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -39,10 +36,6 @@ implementation
 {$R *.dfm}
 
 
-procedure TfrmPrincipal.PraButtonStyle1Click(Sender: TObject);
-begin
-    frmConfigDB.ShowModal;
-end;
 
 procedure TfrmPrincipal.SpeedButton1Click(Sender: TObject);
 begin

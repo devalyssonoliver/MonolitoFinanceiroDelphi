@@ -2,9 +2,10 @@ object frmConfigDB: TfrmConfigDB
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu]
+  BorderStyle = bsNone
   Caption = 'Configura'#231#245'es do Servidor'
-  ClientHeight = 309
-  ClientWidth = 423
+  ClientHeight = 339
+  ClientWidth = 451
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,19 +14,17 @@ object frmConfigDB: TfrmConfigDB
   Font.Style = []
   Position = poDesktopCenter
   StyleName = 'Windows'
-  OnCreate = FormCreate
   TextHeight = 15
   object pnl_Top: TPanel
-    AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 417
+    Left = 0
+    Top = 28
+    Width = 451
     Height = 65
     Align = alTop
+    BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 426
     object img_Top: TImage
       Left = 0
       Top = 0
@@ -109,30 +108,30 @@ object frmConfigDB: TfrmConfigDB
   end
   object pnl_Center: TPanel
     Left = 0
-    Top = 71
-    Width = 423
-    Height = 238
+    Top = 93
+    Width = 451
+    Height = 246
     Align = alClient
+    BevelOuter = bvNone
+    BorderWidth = 10
     Color = clWhite
     ParentBackground = False
     TabOrder = 1
-    ExplicitWidth = 432
-    ExplicitHeight = 242
     object lbName: TLabel
-      Left = 24
+      Left = 50
       Top = 16
-      Width = 215
-      Height = 19
+      Width = 268
+      Height = 25
       Caption = 'Nova Configura'#231#227'o do Servidor'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHotLight
-      Font.Height = 19
+      Font.Height = 25
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object lbIp: TLabel
-      Left = 24
+      Left = 50
       Top = 61
       Width = 65
       Height = 15
@@ -145,7 +144,7 @@ object frmConfigDB: TfrmConfigDB
       ParentFont = False
     end
     object lbPorta: TLabel
-      Left = 310
+      Left = 336
       Top = 111
       Width = 28
       Height = 15
@@ -159,7 +158,7 @@ object frmConfigDB: TfrmConfigDB
     end
     object lb_User: TLabel
       Tag = 5
-      Left = 24
+      Left = 50
       Top = 111
       Width = 40
       Height = 15
@@ -173,7 +172,7 @@ object frmConfigDB: TfrmConfigDB
       ParentFont = False
     end
     object lbBase: TLabel
-      Left = 245
+      Left = 279
       Top = 61
       Width = 76
       Height = 15
@@ -187,40 +186,42 @@ object frmConfigDB: TfrmConfigDB
     end
     object btnConectar: TPraButtonStyle
       AlignWithMargins = True
-      Left = 31
-      Top = 187
+      Left = 176
+      Top = 171
       Width = 113
       Height = 32
+      Enabled = False
       OnClick = BtnConectarClick
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clHighlightText
+      Font.Color = clBlack
       Font.Height = -12
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
-      Pen.Style = psClear
-      Brush.Color = clLawngreen
+      BrushDown.Color = clBackground
+      BrushFocused.Color = clBlack
       FontDown.Charset = DEFAULT_CHARSET
-      FontDown.Color = clWindowText
+      FontDown.Color = clWhite
       FontDown.Height = -12
       FontDown.Name = 'Tahoma'
-      FontDown.Style = []
+      FontDown.Style = [fsBold]
       FontFocused.Charset = DEFAULT_CHARSET
-      FontFocused.Color = clWindowText
+      FontFocused.Color = clWhite
       FontFocused.Height = -12
       FontFocused.Name = 'Tahoma'
-      FontFocused.Style = []
+      FontFocused.Style = [fsBold]
       FontDisabled.Charset = DEFAULT_CHARSET
       FontDisabled.Color = clWindowText
       FontDisabled.Height = -12
       FontDisabled.Name = 'Tahoma'
       FontDisabled.Style = []
-      Caption = 'Conectar'
+      Caption = 'Testar Conex'#227'o'
       TabOrder = 5
+      Radius = 0
     end
     object lbSenha: TLabel
       Tag = 5
-      Left = 167
+      Left = 193
       Top = 111
       Width = 32
       Height = 15
@@ -235,95 +236,161 @@ object frmConfigDB: TfrmConfigDB
     end
     object btnSave: TPraButtonStyle
       AlignWithMargins = True
-      Left = 150
-      Top = 187
+      Left = 295
+      Top = 171
       Width = 113
       Height = 32
       OnClick = btnSaveClick
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clHighlightText
+      Font.Color = clWhite
       Font.Height = -12
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
-      Pen.Style = psClear
-      Brush.Color = clDimgray
+      Brush.Color = clMenuHighlight
+      BrushDown.Color = clBlack
+      BrushFocused.Color = clBlack
       FontDown.Charset = DEFAULT_CHARSET
       FontDown.Color = clWindowText
       FontDown.Height = -12
       FontDown.Name = 'Tahoma'
       FontDown.Style = []
       FontFocused.Charset = DEFAULT_CHARSET
-      FontFocused.Color = clWindowText
+      FontFocused.Color = clWhite
       FontFocused.Height = -12
       FontFocused.Name = 'Tahoma'
-      FontFocused.Style = []
+      FontFocused.Style = [fsBold]
+      FontFocused.CopyOfFont = True
       FontDisabled.Charset = DEFAULT_CHARSET
-      FontDisabled.Color = clWindowText
+      FontDisabled.Color = clWhite
       FontDisabled.Height = -12
       FontDisabled.Name = 'Tahoma'
-      FontDisabled.Style = []
+      FontDisabled.Style = [fsBold]
+      FontDisabled.CopyOfFont = True
       Caption = 'Salvar'
       TabOrder = 6
+      Radius = 0
     end
     object btnEditar: TPraButtonStyle
-      AlignWithMargins = True
-      Left = 269
-      Top = 187
-      Width = 113
-      Height = 32
+      Left = 415
+      Top = 16
+      Width = 28
+      Height = 25
       OnClick = btnEditarClick
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clHighlightText
-      Font.Height = -12
+      Font.Color = clWhite
+      Font.Height = -13
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
-      Pen.Style = psClear
-      Brush.Color = clDarkgray
+      PenDown.Color = 9102078
+      PenDown.Width = 3
+      PenFocused.Style = psClear
+      PenDisabled.Style = psClear
+      Brush.Color = clHighlight
+      BrushDown.Color = 1027294
+      BrushFocused.Color = 1027294
+      BrushDisabled.Color = 8773886
+      Picture.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
+        00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
+        52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
+        597300000048000000480046C96B3E000000E94944415478DAED933B0AC24014
+        453385686FE38AFC55822E41B1D65641C10DD80B0A82AD1FD0C23DB8165B3F85
+        E311230CC9C48C336321F8E0F21E2F9973424844F0E5127F8194B24C5B9039E9
+        0A21A43701F0126D4D72E16A42DAAAC455D0A78D22EB31828E93007095560034
+        651E320F94CB47F6796B41085F920C694524675263B7B71200AAD056241BAE6E
+        8AA4C77C50E11F0934F0573D244DC033DD392381E66B51EB42EA087656021778
+        AAC015FE56E0039E28F005D70A8017691B1FF098C000DE00BE3585EB04A70478
+        EC0FB51548CD3D564F6E2AB806CF776E054F1338C363826FD4EF0BEEDB1B7819
+        79BD57990000002574455874646174653A63726561746500323032302D30342D
+        30365431353A34373A30382B30303A303057AF760D0000002574455874646174
+        653A6D6F6469667900323032302D30342D30365431353A34373A30382B30303A
+        303026F2CEB100000028744558747376673A626173652D7572690066696C653A
+        2F2F2F746D702F6D616769636B2D497337477544727450B87C50000000004945
+        4E44AE426082}
+      PictureFocused.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
+        00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
+        52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
+        597300000048000000480046C96B3E000000E94944415478DAED933B0AC24014
+        453385686FE38AFC55822E41B1D65641C10DD80B0A82AD1FD0C23DB8165B3F85
+        E311230CC9C48C336321F8E0F21E2F9973424844F0E5127F8194B24C5B9039E9
+        0A21A43701F0126D4D72E16A42DAAAC455D0A78D22EB31828E93007095560034
+        651E320F94CB47F6796B41085F920C694524675263B7B71200AAD056241BAE6E
+        8AA4C77C50E11F0934F0573D244DC033DD392381E66B51EB42EA087656021778
+        AAC015FE56E0039E28F005D70A8017691B1FF098C000DE00BE3585EB04A70478
+        EC0FB51548CD3D564F6E2AB806CF776E054F1338C363826FD4EF0BEEDB1B7819
+        79BD57990000002574455874646174653A63726561746500323032302D30342D
+        30365431353A34373A30382B30303A303057AF760D0000002574455874646174
+        653A6D6F6469667900323032302D30342D30365431353A34373A30382B30303A
+        303026F2CEB100000028744558747376673A626173652D7572690066696C653A
+        2F2F2F746D702F6D616769636B2D497337477544727450B87C50000000004945
+        4E44AE426082}
+      PictureDisabled.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
+        00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
+        52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
+        597300000048000000480046C96B3E000001184944415478DA6364A031601CB5
+        60D99E760FC6FF8C4B81062D0A77292F626464FC4F350B96EEEE70676260D800
+        647240856647B894A7235B429105CB7777D400A96634174F8870AD28A4C882A5
+        BBDABC98181925225D2BE72DDFDDDE0034A61E49FA5DA46B8530D916400C675A
+        0764B23230FC4F45B3E4C73F06868068D78A9D6459B0626F87E7FF7F0CEB814C
+        76A8D03F98252B767756FF65F87F06D970922CC062380CFC6364604C89702D9F
+        8F4D1F511660492DC8E027100703C37D2B5916506238410B28351CAF05D4301C
+        A705D4321CAB052B76B5BBFD6764DC480DC3312C20643823235348844BD91662
+        0DC7B00058B67CC76138460E25D782FF58D490E572622DF805343C985CC30959
+        40B1E11816D0020C7D0B007A208519A518D24F0000002574455874646174653A
+        63726561746500323032302D30342D32355431383A32323A32352B30303A3030
+        C01955FC0000002574455874646174653A6D6F6469667900323032302D30342D
+        32355431383A32323A32352B30303A3030B144ED400000002874455874737667
+        3A626173652D7572690066696C653A2F2F2F746D702F6D616769636B2D496D59
+        4A46366C4E0A913C440000000049454E44AE426082}
       FontDown.Charset = DEFAULT_CHARSET
-      FontDown.Color = clWindowText
-      FontDown.Height = -12
+      FontDown.Color = clWhite
+      FontDown.Height = -13
       FontDown.Name = 'Tahoma'
-      FontDown.Style = []
+      FontDown.Style = [fsBold]
       FontFocused.Charset = DEFAULT_CHARSET
-      FontFocused.Color = clWindowText
-      FontFocused.Height = -12
+      FontFocused.Color = clWhite
+      FontFocused.Height = -13
       FontFocused.Name = 'Tahoma'
-      FontFocused.Style = []
+      FontFocused.Style = [fsBold]
       FontDisabled.Charset = DEFAULT_CHARSET
-      FontDisabled.Color = clWindowText
-      FontDisabled.Height = -12
+      FontDisabled.Color = 9737364
+      FontDisabled.Height = -13
       FontDisabled.Name = 'Tahoma'
-      FontDisabled.Style = []
-      Caption = 'Editar'
-      TabOrder = 7
-      TabStop = True
+      FontDisabled.Style = [fsBold]
+      Caption = ''
+      TabOrder = 9
+      Radius = 0
+      Alignment = paLeftJustify
+      TemplateStyle = tsEdit
     end
     object pnl_spt: TPanel
-      Left = 24
-      Top = 41
-      Width = 392
-      Height = 3
+      Left = 0
+      Top = 6
+      Width = 452
+      Height = 4
+      BevelOuter = bvNone
+      Color = clBackground
+      ParentBackground = False
+      TabOrder = 7
+    end
+    object pnl_spt2: TPanel
+      AlignWithMargins = True
+      Left = 0
+      Top = 221
+      Width = 452
+      Height = 4
       BevelOuter = bvNone
       Color = clBackground
       ParentBackground = False
       TabOrder = 8
     end
-    object pnl_spt2: TPanel
-      AlignWithMargins = True
-      Left = 22
-      Top = 225
-      Width = 394
-      Height = 4
-      BevelOuter = bvNone
-      Color = clBackground
-      ParentBackground = False
-      TabOrder = 9
-    end
     object EditIp: TEdit
       Tag = 5
-      Left = 24
+      Left = 50
       Top = 82
       Width = 215
       Height = 23
@@ -336,7 +403,7 @@ object frmConfigDB: TfrmConfigDB
     end
     object editPort: TEdit
       Tag = 5
-      Left = 310
+      Left = 336
       Top = 132
       Width = 72
       Height = 23
@@ -349,7 +416,7 @@ object frmConfigDB: TfrmConfigDB
     end
     object editUser: TEdit
       Tag = 5
-      Left = 24
+      Left = 50
       Top = 132
       Width = 137
       Height = 23
@@ -361,7 +428,7 @@ object frmConfigDB: TfrmConfigDB
     end
     object editBase: TEdit
       Tag = 5
-      Left = 245
+      Left = 271
       Top = 82
       Width = 137
       Height = 23
@@ -373,7 +440,7 @@ object frmConfigDB: TfrmConfigDB
     end
     object editSenha: TEdit
       Tag = 5
-      Left = 167
+      Left = 193
       Top = 132
       Width = 137
       Height = 23
@@ -383,6 +450,65 @@ object frmConfigDB: TfrmConfigDB
       BevelOuter = bvNone
       PasswordChar = '*'
       TabOrder = 3
+    end
+  end
+  object PnlBorderFrm: TPanel
+    Left = 0
+    Top = 0
+    Width = 451
+    Height = 28
+    Align = alTop
+    BevelOuter = bvLowered
+    Color = clHighlight
+    ParentBackground = False
+    TabOrder = 2
+    object btnClose: TPraButtonStyle
+      Left = 424
+      Top = 0
+      Width = 28
+      Height = 28
+      OnClick = btnCloseClick
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      Pen.Style = psClear
+      PenDown.Style = psClear
+      PenFocused.Style = psClear
+      Brush.Style = bsClear
+      BrushDown.Color = clRed
+      BrushFocused.Color = clRed
+      Picture.Data = {
+        0954506E67496D61676589504E470D0A1A0A0000000D494844520000001A0000
+        001A0806000000A94A4CCE000000097048597300000B1300000B1301009A9C18
+        000000B84944415478DA6364A013601CB568D422622DE203E24F449A85572D3E
+        8BF881F82A102702F16E02965803F11A20D607E257E4F8C80E88D703713C106F
+        C163C946204E86D264051DB2650940BC991C4B88B508046C8178039A65304B92
+        807813210348497530CB4071F60ECA26CA12522D020147205E0BC4FF81380E88
+        B712AB71505A841C4FA0A0233A7E48B1085BCA233AC5116B11BEBC44B5E40DB3
+        045F7C5841832F051AB4245B44D722882E852A55C1A845A316C101005A6F321B
+        ACC508CB0000000049454E44AE426082}
+      FontDown.Charset = DEFAULT_CHARSET
+      FontDown.Color = clWindowText
+      FontDown.Height = -12
+      FontDown.Name = 'Tahoma'
+      FontDown.Style = []
+      FontFocused.Charset = DEFAULT_CHARSET
+      FontFocused.Color = clWindowText
+      FontFocused.Height = -12
+      FontFocused.Name = 'Tahoma'
+      FontFocused.Style = []
+      FontDisabled.Charset = DEFAULT_CHARSET
+      FontDisabled.Color = clWindowText
+      FontDisabled.Height = -12
+      FontDisabled.Name = 'Tahoma'
+      FontDisabled.Style = []
+      Caption = ''
+      TabOrder = 0
+      Radius = 0
+      PictureCenter = True
     end
   end
 end

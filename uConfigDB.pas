@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
   Vcl.ExtCtrls, Vcl.StdCtrls, PraButtonStyle, uConexaoModulo,
-  Vcl.Imaging.pngimage, IniFiles;
+  Vcl.Imaging.pngimage, IniFiles, unitPrincipal;
 
 type
   TfrmConfigDB = class(TForm)
@@ -30,18 +30,18 @@ type
     editSenha: TEdit;
     lbSenha: TLabel;
     btnSave: TPraButtonStyle;
+    PnlBorderFrm: TPanel;
+    btnClose: TPraButtonStyle;
     btnEditar: TPraButtonStyle;
     procedure BtnConectarClick(Sender: TObject);
     procedure BtnSaveClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+    procedure btnCloseClick(Sender: TObject);
   private
-    { Private declarations }
     function ValidarEntradas: Boolean;
     procedure HabilitarEdicao(const Enabled: Boolean);
 
   public
-    { Public declarations }
   end;
 
 var
@@ -53,12 +53,9 @@ implementation
 
 procedure TfrmConfigDB.BtnConectarClick(Sender: TObject);
 begin
-  AjustarConDB();
-  if DataModel.Con.Connected then
-  begin
-    ShowMessage('Conexão feita com sucesso.');
 
-  end;
+  AjustarConDB();
+
 end;
 
 procedure TfrmConfigDB.BtnSaveClick(Sender: TObject);
@@ -71,35 +68,25 @@ begin
     configIni.DBUser := editUser.Text;
     configIni.DBPass := editSenha.Text;
     GravarIni;
-
-
-
     Application.MessageBox('Configurações salvas com sucesso.', 'Sucesso',
       MB_OK + MB_ICONINFORMATION);
-      HabilitarEdicao(False);
-
-  end;
-end;
-
-procedure TfrmConfigDB.FormCreate(Sender: TObject);
-begin
-  if FileExists(ChangeFileExt(Application.ExeName, '.ini')) then
-  begin
-    LerIni;
-
-  end
-  else
-
-  begin
-     frmConfigDB.Show;
-     GravarIni();
+    HabilitarEdicao(False);
+    btnConectar.Enabled := True;
   end;
 end;
 
 procedure TfrmConfigDB.btnEditarClick(Sender: TObject);
 begin
-  // Habilita a edição dos campos ao clicar no botão "Editar"
   HabilitarEdicao(True);
+end;
+
+procedure TfrmConfigDB.btnCloseClick(Sender: TObject);
+begin
+  if MessageDlg('Você deseja fechar o sistema?', mtConfirmation, [mbYes, mbNo],
+    0) = mrYes then
+  begin
+    Application.Terminate;
+  end;
 end;
 
 function TfrmConfigDB.ValidarEntradas: Boolean;
@@ -157,5 +144,5 @@ begin
   editSenha.Enabled := Enabled;
   btnSave.Enabled := Enabled;
 end;
-end.
 
+end.

@@ -9,10 +9,10 @@ uses
   Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus, Vcl.RibbonActnMenus,
   System.Actions, Vcl.ActnList, Vcl.RibbonSilverStyleActnCtrls, Vcl.ExtCtrls,
   Vcl.RibbonObsidianStyleActnCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.Menus,
-  Vcl.Imaging.pngimage, Unit2;
+  Vcl.Imaging.pngimage, uClientes, PraButtonStyle;
 
 type
-  TForm1 = class(TForm)
+  TfrmPrincipal = class(TForm)
     Ribbon1: TRibbon;
     ActionForRibbon: TActionManager;
     ImageList: TImageList;
@@ -20,11 +20,9 @@ type
     RibbonPage: TRibbonPage;
     rb_clientes: TRibbonGroup;
     SpeedButton1: TSpeedButton;
+    RibbonGroup1: TRibbonGroup;
+    PraButtonStyle1: TPraButtonStyle;
     procedure SpeedButton1Click(Sender: TObject);
-
-
-
-
 
   private
     { Private declarations }
@@ -33,23 +31,16 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmPrincipal: TfrmPrincipal;
 
 implementation
 
 {$R *.dfm}
 
 
-
-
-
-
-
-
-
-procedure TForm1.SpeedButton1Click(Sender: TObject);
+procedure TfrmPrincipal.SpeedButton1Click(Sender: TObject);
 begin
-    Frm_Clientes.Show;
+    frmClientes.show;
 end;
 
 end.

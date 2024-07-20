@@ -12,7 +12,6 @@ object frmClientes: TfrmClientes
   Font.Style = []
   Position = poDesktopCenter
   StyleName = 'Windows'
-  OnCreate = FormCreate
   TextHeight = 15
   object pnl_Principal: TCardPanel
     Left = 0
@@ -23,506 +22,14 @@ object frmClientes: TfrmClientes
     ActiveCard = cardLocalizar
     BevelOuter = bvNone
     TabOrder = 0
-    object cardCadastrar: TCard
+    object cardLocalizar: TCard
       Left = 0
       Top = 0
       Width = 979
       Height = 624
       CardIndex = 0
       TabOrder = 0
-      ExplicitLeft = 24
-      ExplicitTop = 40
-      object pnl_Top: TPanel
-        Left = 0
-        Top = 0
-        Width = 979
-        Height = 9
-        Align = alTop
-        Color = clHighlight
-        ParentBackground = False
-        TabOrder = 0
-      end
-      object pnlButtons: TPanel
-        Left = 0
-        Top = 568
-        Width = 979
-        Height = 56
-        Align = alBottom
-        BevelOuter = bvNone
-        Color = clSilver
-        ParentBackground = False
-        TabOrder = 1
-        object btnSalvar: TPraButtonStyle
-          AlignWithMargins = True
-          Left = 3
-          Top = 3
-          Width = 90
-          Height = 50
-          Align = alLeft
-          OnClick = btnSalvarClick
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWhite
-          Font.Height = -13
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Pen.Color = 4565545
-          Pen.Style = psClear
-          PenDown.Color = 10671252
-          PenDown.Width = 3
-          PenFocused.Style = psClear
-          PenDisabled.Style = psClear
-          Brush.Color = 4565545
-          BrushDown.Color = 3705378
-          BrushFocused.Color = 3705378
-          BrushDisabled.Color = 16773346
-          Picture.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E0000008D4944415478DA6364A03160A4BB
-            05FFFFFFF706523381589A80DE464646C606722C780CA46408E87B00C40AC458
-            82CD82FF44F85C1E88F703B1121077022DA9A0AA0540031981CAE488B1846C0B
-            A06A095A429105C45842B105E896A0CB911BC9445B3E6AC1A805A3160C570B88
-            A9707081C740F3E50859E009A466916109C86169400B76E0B580DA80E6160000
-            34706B196D73EF0D0000002574455874646174653A6372656174650032303230
-            2D30352D31355431323A32333A32372B30303A30300663921100000025744558
-            74646174653A6D6F6469667900323032302D30352D31355431323A32333A3237
-            2B30303A3030773E2AAD00000028744558747376673A626173652D7572690066
-            696C653A2F2F2F746D702F6D616769636B2D484F716D584B37544EC5C66A0000
-            000049454E44AE426082}
-          PictureFocused.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E0000008D4944415478DA6364A03160A4BB
-            05FFFFFFF706523381589A80DE464646C606722C780CA46408E87B00C40AC458
-            82CD82FF44F85C1E88F703B1121077022DA9A0AA0540031981CAE488B1846C0B
-            A06A095A429105C45842B105E896A0CB911BC9445B3E6AC1A805A3160C570B88
-            A9707081C740F3E50859E009A466916109C86169400B76E0B580DA80E6160000
-            34706B196D73EF0D0000002574455874646174653A6372656174650032303230
-            2D30352D31355431323A32333A32372B30303A30300663921100000025744558
-            74646174653A6D6F6469667900323032302D30352D31355431323A32333A3237
-            2B30303A3030773E2AAD00000028744558747376673A626173652D7572690066
-            696C653A2F2F2F746D702F6D616769636B2D484F716D584B37544EC5C66A0000
-            000049454E44AE426082}
-          PictureDisabled.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E0000008D4944415478DA6364A03160A4BB
-            05FFFFFFF706523381589A80DE464646C606722C780CA46408E87B00C40AC458
-            82CD82FF44F85C1E88F703B1121077022DA9A0AA0540031981CAE488B1846C0B
-            A06A095A429105C45842B105E896A0CB911BC9445B3E6AC1A805A3160C570B88
-            A9707081C740F3E50859E009A466916109C86169400B76E0B580DA80E6160000
-            34706B196D73EF0D0000002574455874646174653A6372656174650032303230
-            2D30352D31355431323A32333A32372B30303A30300663921100000025744558
-            74646174653A6D6F6469667900323032302D30352D31355431323A32333A3237
-            2B30303A3030773E2AAD00000028744558747376673A626173652D7572690066
-            696C653A2F2F2F746D702F6D616769636B2D484F716D584B37544EC5C66A0000
-            000049454E44AE426082}
-          FontDown.Charset = DEFAULT_CHARSET
-          FontDown.Color = clWhite
-          FontDown.Height = -13
-          FontDown.Name = 'Tahoma'
-          FontDown.Style = [fsBold]
-          FontFocused.Charset = DEFAULT_CHARSET
-          FontFocused.Color = clWhite
-          FontFocused.Height = -13
-          FontFocused.Name = 'Tahoma'
-          FontFocused.Style = [fsBold]
-          FontDisabled.Charset = DEFAULT_CHARSET
-          FontDisabled.Color = 16773346
-          FontDisabled.Height = -13
-          FontDisabled.Name = 'Tahoma'
-          FontDisabled.Style = [fsBold]
-          Caption = 'Salvar'
-          TabOrder = 0
-          Alignment = paLeftJustify
-          TemplateStyle = tsInsert
-          ExplicitHeight = 32
-        end
-        object btnCancelar: TPraButtonStyle
-          AlignWithMargins = True
-          Left = 886
-          Top = 3
-          Width = 90
-          Height = 50
-          Align = alRight
-          OnClick = btnCancelarClick
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWhite
-          Font.Height = -13
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Pen.Style = psClear
-          PenDown.Color = 12499381
-          PenDown.Width = 3
-          PenFocused.Style = psClear
-          PenDisabled.Style = psClear
-          Brush.Color = 8222060
-          BrushDown.Color = 6840922
-          BrushFocused.Color = 6840922
-          BrushDisabled.Color = 11446434
-          Picture.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E0000018C4944415478DAC595CD2E035114
-            C767D2C48A58492CAC48A4622CC41BD403A0151F090F6065411B8FE0A30BDE01
-            95F8A83E807A82DA68D044D8D8D96183C8F88DDC19774E66D2999AEA497E39B7
-            F7DC39FF7BCFED9C318D369BD95101DBB6BB7033300DE330A0424F700515289B
-            A6F9115B80E4B3B82D186CB2C907C82372164980C42995782D66358AB081D057
-            3381620BC93D1104F2A10224CFE14E5A4CEE5A4E2F9727A02EF40686B4C577B0
-            0225E817899E610176614C9B7F841144DEA5C03CEE48249964619598C5B80A7D
-            5AF20CB13AB10CE30BF1DC1CB1632950523B92BB7444AE89A7195F422A604E9E
-            EE80F8921468E086036AAAEFD6FA79E877AC9F4AB7066BD252E015D71D7271DE
-            49D4DAB09DBBF6C6DA9E760ABCB0B6F7DF4B74885B4CE892F7892F4B81B6FF4D
-            9D17EDD6F037B73AAC2A61590AF745DB034B9BBF8751B7C3CA5691C59D1A7FB3
-            2CC9CBEE8FA49BDD0EC90BFA4458BBDE84F598C9A3B56B51AE6DC3DFFC82CCA9
-            79412F4B240125E25CFC9462C2F07F326B700E15927F86E5E8EC473F09FB06E8
-            C4C419F45D82A10000002574455874646174653A63726561746500323032302D
-            30342D32355431373A32393A33392B30303A3030148311D40000002574455874
-            646174653A6D6F6469667900323032302D30342D32355431373A32393A33392B
-            30303A303065DEA96800000028744558747376673A626173652D757269006669
-            6C653A2F2F2F746D702F6D616769636B2D46494C4446726E5322CB3569000000
-            0049454E44AE426082}
-          PictureFocused.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E0000018C4944415478DAC595CD2E035114
-            C767D2C48A58492CAC48A4622CC41BD403A0151F090F6065411B8FE0A30BDE01
-            95F8A83E807A82DA68D044D8D8D96183C8F88DDC19774E66D2999AEA497E39B7
-            F7DC39FF7BCFED9C318D369BD95101DBB6BB7033300DE330A0424F700515289B
-            A6F9115B80E4B3B82D186CB2C907C82372164980C42995782D66358AB081D057
-            3381620BC93D1104F2A10224CFE14E5A4CEE5A4E2F9727A02EF40686B4C577B0
-            0225E817899E610176614C9B7F841144DEA5C03CEE48249964619598C5B80A7D
-            5AF20CB13AB10CE30BF1DC1CB1632950523B92BB7444AE89A7195F422A604E9E
-            EE80F8921468E086036AAAEFD6FA79E877AC9F4AB7066BD252E015D71D7271DE
-            49D4DAB09DBBF6C6DA9E760ABCB0B6F7DF4B74885B4CE892F7892F4B81B6FF4D
-            9D17EDD6F037B73AAC2A61590AF745DB034B9BBF8751B7C3CA5691C59D1A7FB3
-            2CC9CBEE8FA49BDD0EC90BFA4458BBDE84F598C9A3B56B51AE6DC3DFFC82CCA9
-            79412F4B240125E25CFC9462C2F07F326B700E15927F86E5E8EC473F09FB06E8
-            C4C419F45D82A10000002574455874646174653A63726561746500323032302D
-            30342D32355431373A32393A33392B30303A3030148311D40000002574455874
-            646174653A6D6F6469667900323032302D30342D32355431373A32393A33392B
-            30303A303065DEA96800000028744558747376673A626173652D757269006669
-            6C653A2F2F2F746D702F6D616769636B2D46494C4446726E5322CB3569000000
-            0049454E44AE426082}
-          PictureDisabled.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E0000018C4944415478DAC595CD2E035114
-            C767D2C48A58492CAC48A4622CC41BD403A0151F090F6065411B8FE0A30BDE01
-            95F8A83E807A82DA68D044D8D8D96183C8F88DDC19774E66D2999AEA497E39B7
-            F7DC39FF7BCFED9C318D369BD95101DBB6BB7033300DE330A0424F700515289B
-            A6F9115B80E4B3B82D186CB2C907C82372164980C42995782D66358AB081D057
-            3381620BC93D1104F2A10224CFE14E5A4CEE5A4E2F9727A02EF40686B4C577B0
-            0225E817899E610176614C9B7F841144DEA5C03CEE48249964619598C5B80A7D
-            5AF20CB13AB10CE30BF1DC1CB1632950523B92BB7444AE89A7195F422A604E9E
-            EE80F8921468E086036AAAEFD6FA79E877AC9F4AB7066BD252E015D71D7271DE
-            49D4DAB09DBBF6C6DA9E760ABCB0B6F7DF4B74885B4CE892F7892F4B81B6FF4D
-            9D17EDD6F037B73AAC2A61590AF745DB034B9BBF8751B7C3CA5691C59D1A7FB3
-            2CC9CBEE8FA49BDD0EC90BFA4458BBDE84F598C9A3B56B51AE6DC3DFFC82CCA9
-            79412F4B240125E25CFC9462C2F07F326B700E15927F86E5E8EC473F09FB06E8
-            C4C419F45D82A10000002574455874646174653A63726561746500323032302D
-            30342D32355431373A32393A33392B30303A3030148311D40000002574455874
-            646174653A6D6F6469667900323032302D30342D32355431373A32393A33392B
-            30303A303065DEA96800000028744558747376673A626173652D757269006669
-            6C653A2F2F2F746D702F6D616769636B2D46494C4446726E5322CB3569000000
-            0049454E44AE426082}
-          FontDown.Charset = DEFAULT_CHARSET
-          FontDown.Color = clWhite
-          FontDown.Height = -13
-          FontDown.Name = 'Tahoma'
-          FontDown.Style = [fsBold]
-          FontFocused.Charset = DEFAULT_CHARSET
-          FontFocused.Color = clWhite
-          FontFocused.Height = -13
-          FontFocused.Name = 'Tahoma'
-          FontFocused.Style = [fsBold]
-          FontDisabled.Charset = DEFAULT_CHARSET
-          FontDisabled.Color = 16773346
-          FontDisabled.Height = -13
-          FontDisabled.Name = 'Tahoma'
-          FontDisabled.Style = [fsBold]
-          Caption = 'Cancelar'
-          TabOrder = 2
-          Alignment = paLeftJustify
-          TemplateStyle = tsCancel
-          ExplicitHeight = 32
-        end
-        object btnEditar: TPraButtonStyle
-          AlignWithMargins = True
-          Left = 99
-          Top = 3
-          Width = 90
-          Height = 50
-          Align = alLeft
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWhite
-          Font.Height = -13
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Pen.Style = psClear
-          PenDown.Color = 9102078
-          PenDown.Width = 3
-          PenFocused.Style = psClear
-          PenDisabled.Style = psClear
-          Brush.Color = 1492476
-          BrushDown.Color = 1027294
-          BrushFocused.Color = 1027294
-          BrushDisabled.Color = 8773886
-          Picture.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E000000E94944415478DAED933B0AC24014
-            453385686FE38AFC55822E41B1D65641C10DD80B0A82AD1FD0C23DB8165B3F85
-            E311230CC9C48C336321F8E0F21E2F9973424844F0E5127F8194B24C5B9039E9
-            0A21A43701F0126D4D72E16A42DAAAC455D0A78D22EB31828E93007095560034
-            651E320F94CB47F6796B41085F920C694524675263B7B71200AAD056241BAE6E
-            8AA4C77C50E11F0934F0573D244DC033DD392381E66B51EB42EA087656021778
-            AAC015FE56E0039E28F005D70A8017691B1FF098C000DE00BE3585EB04A70478
-            EC0FB51548CD3D564F6E2AB806CF776E054F1338C363826FD4EF0BEEDB1B7819
-            79BD57990000002574455874646174653A63726561746500323032302D30342D
-            30365431353A34373A30382B30303A303057AF760D0000002574455874646174
-            653A6D6F6469667900323032302D30342D30365431353A34373A30382B30303A
-            303026F2CEB100000028744558747376673A626173652D7572690066696C653A
-            2F2F2F746D702F6D616769636B2D497337477544727450B87C50000000004945
-            4E44AE426082}
-          PictureFocused.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E000000E94944415478DAED933B0AC24014
-            453385686FE38AFC55822E41B1D65641C10DD80B0A82AD1FD0C23DB8165B3F85
-            E311230CC9C48C336321F8E0F21E2F9973424844F0E5127F8194B24C5B9039E9
-            0A21A43701F0126D4D72E16A42DAAAC455D0A78D22EB31828E93007095560034
-            651E320F94CB47F6796B41085F920C694524675263B7B71200AAD056241BAE6E
-            8AA4C77C50E11F0934F0573D244DC033DD392381E66B51EB42EA087656021778
-            AAC015FE56E0039E28F005D70A8017691B1FF098C000DE00BE3585EB04A70478
-            EC0FB51548CD3D564F6E2AB806CF776E054F1338C363826FD4EF0BEEDB1B7819
-            79BD57990000002574455874646174653A63726561746500323032302D30342D
-            30365431353A34373A30382B30303A303057AF760D0000002574455874646174
-            653A6D6F6469667900323032302D30342D30365431353A34373A30382B30303A
-            303026F2CEB100000028744558747376673A626173652D7572690066696C653A
-            2F2F2F746D702F6D616769636B2D497337477544727450B87C50000000004945
-            4E44AE426082}
-          PictureDisabled.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E000001184944415478DA6364A031601CB5
-            60D99E760FC6FF8C4B81062D0A77292F626464FC4F350B96EEEE70676260D800
-            647240856647B894A7235B429105CB7777D400A96634174F8870AD28A4C882A5
-            BBDABC98181925225D2BE72DDFDDDE0034A61E49FA5DA46B8530D916400C675A
-            0764B23230FC4F45B3E4C73F06868068D78A9D6459B0626F87E7FF7F0CEB814C
-            76A8D03F98252B767756FF65F87F06D970922CC062380CFC6364604C89702D9F
-            8F4D1F511660492DC8E027100703C37D2B5916506238410B28351CAF05D4301C
-            A705D4321CAB052B76B5BBFD6764DC480DC3312C20643823235348844BD91662
-            0DC7B00058B67CC76138460E25D782FF58D490E572622DF805343C985CC30959
-            40B1E11816D0020C7D0B007A208519A518D24F0000002574455874646174653A
-            63726561746500323032302D30342D32355431383A32323A32352B30303A3030
-            C01955FC0000002574455874646174653A6D6F6469667900323032302D30342D
-            32355431383A32323A32352B30303A3030B144ED400000002874455874737667
-            3A626173652D7572690066696C653A2F2F2F746D702F6D616769636B2D496D59
-            4A46366C4E0A913C440000000049454E44AE426082}
-          FontDown.Charset = DEFAULT_CHARSET
-          FontDown.Color = clWhite
-          FontDown.Height = -13
-          FontDown.Name = 'Tahoma'
-          FontDown.Style = [fsBold]
-          FontFocused.Charset = DEFAULT_CHARSET
-          FontFocused.Color = clWhite
-          FontFocused.Height = -13
-          FontFocused.Name = 'Tahoma'
-          FontFocused.Style = [fsBold]
-          FontDisabled.Charset = DEFAULT_CHARSET
-          FontDisabled.Color = 9737364
-          FontDisabled.Height = -13
-          FontDisabled.Name = 'Tahoma'
-          FontDisabled.Style = [fsBold]
-          Caption = 'Editar'
-          TabOrder = 3
-          Alignment = paLeftJustify
-          TemplateStyle = tsEdit
-          ExplicitHeight = 32
-        end
-        object PraButtonStyle2: TPraButtonStyle
-          AlignWithMargins = True
-          Left = 195
-          Top = 3
-          Width = 90
-          Height = 50
-          Align = alLeft
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWhite
-          Font.Height = -13
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Pen.Style = psClear
-          PenDown.Color = 10722284
-          PenDown.Width = 3
-          PenFocused.Style = psClear
-          PenDisabled.Style = psClear
-          Brush.Color = 4667354
-          BrushDown.Color = 3548870
-          BrushFocused.Color = 3548870
-          BrushDisabled.Color = 11117294
-          Picture.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E000000664944415478DA6364A031601CFE
-            16FCFFFF5F0E48ED07622534A94740ECC8C8C8788F640B8086FE27CBB5403038
-            2CA026C06901A9BEC0E6FA510B462D18B560D4022A58F01848C91069FE63A0F9
-            72A45AE009A466116109C82169400B76906401B5C0D0B70000AAAA491951425F
-            A20000002574455874646174653A63726561746500323032302D30342D303654
-            31353A34343A31302B30303A303043DD83F70000002574455874646174653A6D
-            6F6469667900323032302D30342D30365431353A34343A31302B30303A303032
-            803B4B00000028744558747376673A626173652D7572690066696C653A2F2F2F
-            746D702F6D616769636B2D673952476B4D7A46BB1F78410000000049454E44AE
-            426082}
-          PictureFocused.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E000000664944415478DA6364A031601CFE
-            16FCFFFF5F0E48ED07622534A94740ECC8C8C8788F640B8086FE27CBB5403038
-            2CA026C06901A9BEC0E6FA510B462D18B560D4022A58F01848C91069FE63A0F9
-            72A45AE009A466116109C82169400B76906401B5C0D0B70000AAAA491951425F
-            A20000002574455874646174653A63726561746500323032302D30342D303654
-            31353A34343A31302B30303A303043DD83F70000002574455874646174653A6D
-            6F6469667900323032302D30342D30365431353A34343A31302B30303A303032
-            803B4B00000028744558747376673A626173652D7572690066696C653A2F2F2F
-            746D702F6D616769636B2D673952476B4D7A46BB1F78410000000049454E44AE
-            426082}
-          PictureDisabled.Data = {
-            0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
-            00180806000000E0773DF80000000467414D410000B18F0BFC61050000000173
-            52474200AECE1CE900000006624B4744000000000000F943BB7F000000097048
-            597300000048000000480046C96B3E000000664944415478DA6364A031601CFE
-            16FCFFFF5F0E48ED07622534A94740ECC8C8C8788F640B8086FE27CBB5403038
-            2CA026C06901A9BEC0E6FA510B462D18B560D4022A58F01848C91069FE63A0F9
-            72A45AE009A466116109C82169400B76906401B5C0D0B70000AAAA491951425F
-            A20000002574455874646174653A63726561746500323032302D30342D303654
-            31353A34343A31302B30303A303043DD83F70000002574455874646174653A6D
-            6F6469667900323032302D30342D30365431353A34343A31302B30303A303032
-            803B4B00000028744558747376673A626173652D7572690066696C653A2F2F2F
-            746D702F6D616769636B2D673952476B4D7A46BB1F78410000000049454E44AE
-            426082}
-          FontDown.Charset = DEFAULT_CHARSET
-          FontDown.Color = clWhite
-          FontDown.Height = -13
-          FontDown.Name = 'Tahoma'
-          FontDown.Style = [fsBold]
-          FontFocused.Charset = DEFAULT_CHARSET
-          FontFocused.Color = clWhite
-          FontFocused.Height = -13
-          FontFocused.Name = 'Tahoma'
-          FontFocused.Style = [fsBold]
-          FontDisabled.Charset = DEFAULT_CHARSET
-          FontDisabled.Color = 16773346
-          FontDisabled.Height = -13
-          FontDisabled.Name = 'Tahoma'
-          FontDisabled.Style = [fsBold]
-          Caption = 'Apagar'
-          TabOrder = 1
-          Alignment = paLeftJustify
-          TemplateStyle = tsDelete
-        end
-      end
-      object Panel5: TPanel
-        Left = 0
-        Top = 9
-        Width = 979
-        Height = 56
-        Align = alTop
-        BevelOuter = bvNone
-        Color = clSilver
-        ParentBackground = False
-        TabOrder = 2
-      end
-      object GroupBox1: TGroupBox
-        Left = 159
-        Top = 71
-        Width = 393
-        Height = 42
-        Caption = 'Nome'
-        Color = clBtnFace
-        ParentBackground = False
-        ParentColor = False
-        TabOrder = 3
-        object editNome: TEdit
-          AlignWithMargins = True
-          Left = 3
-          Top = 16
-          Width = 214
-          Height = 23
-          Alignment = taCenter
-          BevelInner = bvNone
-          BevelOuter = bvNone
-          TabOrder = 0
-        end
-      end
-      object GroupBox2: TGroupBox
-        Left = 35
-        Top = 71
-        Width = 118
-        Height = 42
-        Caption = 'C'#243'digo'
-        Color = clBtnFace
-        ParentBackground = False
-        ParentColor = False
-        TabOrder = 4
-      end
-      object editCod: TEdit
-        AlignWithMargins = True
-        Left = 43
-        Top = 87
-        Width = 102
-        Height = 23
-        Alignment = taCenter
-        BevelInner = bvNone
-        BevelOuter = bvNone
-        TabOrder = 5
-      end
-      object GPDate: TGroupBox
-        Left = 558
-        Top = 71
-        Width = 171
-        Height = 42
-        Caption = 'Data de Nascimento'
-        Color = clBtnFace
-        ParentBackground = False
-        ParentColor = False
-        TabOrder = 6
-        object dtNasci: TDateTimePicker
-          Left = 11
-          Top = 16
-          Width = 126
-          Height = 23
-          Date = 45490.000000000000000000
-          Time = 0.605142974534828700
-          TabOrder = 0
-          StyleName = 'Windows10'
-        end
-      end
-    end
-    object cardLocalizar: TCard
-      Left = 0
-      Top = 0
-      Width = 979
-      Height = 624
-      CardIndex = 1
-      TabOrder = 1
-      object Panel1: TPanel
+      object pnlTop: TPanel
         Left = 0
         Top = 0
         Width = 979
@@ -531,7 +38,6 @@ object frmClientes: TfrmClientes
         Color = clMedGray
         ParentBackground = False
         TabOrder = 0
-        ExplicitTop = 8
         object Image1: TImage
           Left = 16
           Top = 5
@@ -608,7 +114,7 @@ object frmClientes: TfrmClientes
           ParentColor = False
           ParentFont = False
         end
-        object Panel2: TPanel
+        object pnlPesquisar: TPanel
           Left = 1
           Top = 42
           Width = 977
@@ -677,7 +183,7 @@ object frmClientes: TfrmClientes
           end
         end
       end
-      object Panel3: TPanel
+      object pnlButtons: TPanel
         Left = 0
         Top = 564
         Width = 979
@@ -688,9 +194,9 @@ object frmClientes: TfrmClientes
         TabOrder = 1
         object PraButtonStyle1: TPraButtonStyle
           AlignWithMargins = True
-          Left = 847
+          Left = 848
           Top = 3
-          Width = 129
+          Width = 128
           Height = 54
           Align = alRight
           Font.Charset = DEFAULT_CHARSET
@@ -699,7 +205,6 @@ object frmClientes: TfrmClientes
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
-          Pen.Style = psClear
           PenDown.Color = 10671252
           PenDown.Width = 3
           PenFocused.Style = psClear
@@ -745,10 +250,9 @@ object frmClientes: TfrmClientes
           FontDisabled.CopyOfFont = True
           Caption = 'Imprimir'
           TabOrder = 1
-          Radius = 16
+          Radius = 0
           Alignment = paLeftJustify
           PictureCenter = True
-          ExplicitLeft = 840
         end
         object PraButtonStyle4: TPraButtonStyle
           AlignWithMargins = True
@@ -763,7 +267,6 @@ object frmClientes: TfrmClientes
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
-          Pen.Style = psClear
           PenDown.Color = 10671252
           PenDown.Width = 3
           PenFocused.Style = psClear
@@ -846,7 +349,7 @@ object frmClientes: TfrmClientes
           FontDisabled.CopyOfFont = True
           Caption = 'Exibir '
           TabOrder = 3
-          Radius = 16
+          Radius = 0
           Alignment = paLeftJustify
           ExplicitLeft = 16
           ExplicitTop = 5
@@ -858,14 +361,12 @@ object frmClientes: TfrmClientes
           Width = 105
           Height = 54
           Align = alLeft
-          OnClick = PraButtonStyle5Click
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWhite
           Font.Height = -19
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
-          Pen.Style = psClear
           PenDown.Color = 10671252
           PenDown.Width = 3
           PenFocused.Style = psClear
@@ -969,12 +470,12 @@ object frmClientes: TfrmClientes
           FontDisabled.CopyOfFont = True
           Caption = 'Novo'
           TabOrder = 0
-          Radius = 16
+          Radius = 0
           Alignment = paLeftJustify
           ExplicitLeft = 16
           ExplicitTop = 5
         end
-        object PraButtonStyle6: TPraButtonStyle
+        object btnApagar: TPraButtonStyle
           AlignWithMargins = True
           Left = 225
           Top = 3
@@ -987,7 +488,6 @@ object frmClientes: TfrmClientes
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
-          Pen.Style = psClear
           PenDown.Color = 10671252
           PenDown.Width = 3
           PenFocused.Style = psClear
@@ -1042,20 +542,19 @@ object frmClientes: TfrmClientes
           FontDisabled.CopyOfFont = True
           Caption = 'Apagar'
           TabOrder = 2
-          Radius = 16
+          Radius = 0
           Alignment = paLeftJustify
           PictureCenter = True
           ExplicitTop = 5
         end
       end
-      object Panel4: TPanel
+      object pnlDBGrid: TPanel
         Left = 0
         Top = 84
         Width = 979
         Height = 480
         Align = alClient
         TabOrder = 2
-        ExplicitTop = 92
         object Splitter2: TSplitter
           Left = 1
           Top = 1
@@ -1064,19 +563,50 @@ object frmClientes: TfrmClientes
           ExplicitTop = 192
           ExplicitHeight = 100
         end
-        object DBGrid2: TDBGrid
+        object XDBGrid1: TXDBGrid
           Left = 4
           Top = 1
           Width = 974
           Height = 478
           Align = alClient
           DataSource = dtSource
+          GridStyle.VisualStyle = vsXPStyle
+          SelectRowColor = clNone
           TabOrder = 0
-          TitleFont.Charset = DEFAULT_CHARSET
-          TitleFont.Color = clWindowText
-          TitleFont.Height = -12
-          TitleFont.Name = 'Segoe UI'
-          TitleFont.Style = []
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'codigo'
+              Title.Caption = 'C'#243'digo'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'nome'
+              Title.Caption = 'Nome'
+              Visible = True
+              Width = 166
+            end
+            item
+              Expanded = False
+              FieldName = 'endereco'
+              Title.Caption = 'Endere'#231'o'
+              Visible = True
+              Width = 337
+            end
+            item
+              Expanded = False
+              FieldName = 'email'
+              Title.Caption = 'E-mail'
+              Visible = True
+              Width = 170
+            end
+            item
+              Expanded = False
+              FieldName = 'telefone'
+              Title.Caption = 'Telefone'
+              Visible = True
+            end>
         end
       end
     end
@@ -2153,6 +1683,62 @@ object frmClientes: TfrmClientes
     SQL.Strings = (
       'SELECT * FROM clientes')
     Left = 752
+    Top = 452
+    object FDQuery1codigo: TIntegerField
+      DisplayWidth = 10
+      FieldName = 'codigo'
+      Origin = 'codigo'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQuery1nome: TWideStringField
+      DisplayWidth = 48
+      FieldName = 'nome'
+      Origin = 'nome'
+      Size = 100
+    end
+    object FDQuery1apelido: TWideStringField
+      DisplayWidth = 29
+      FieldName = 'apelido'
+      Origin = 'apelido'
+      Size = 50
+    end
+    object FDQuery1sexo: TWideStringField
+      DisplayWidth = 1
+      FieldName = 'sexo'
+      Origin = 'sexo'
+      Size = 1
+    end
+    object FDQuery1endereco: TWideStringField
+      DisplayWidth = 100
+      FieldName = 'endereco'
+      Origin = 'endereco'
+      Size = 100
+    end
+    object FDQuery1email: TWideStringField
+      DisplayWidth = 100
+      FieldName = 'email'
+      Origin = 'email'
+      Size = 100
+    end
+    object FDQuery1telefone: TWideStringField
+      DisplayWidth = 20
+      FieldName = 'telefone'
+      Origin = 'telefone'
+    end
+    object FDQuery1bairro: TWideStringField
+      DisplayWidth = 100
+      FieldName = 'bairro'
+      Origin = 'bairro'
+      Size = 100
+    end
+  end
+  object FDTable: TFDTable
+    Active = True
+    IndexFieldNames = 'codigo'
+    Connection = DataModel.Con
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'clientes'
+    Left = 632
     Top = 452
   end
 end

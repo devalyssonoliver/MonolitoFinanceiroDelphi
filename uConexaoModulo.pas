@@ -8,7 +8,7 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
   FireDAC.Phys.PGDef, FireDAC.Phys.PG, Data.DB, FireDAC.Comp.Client, IniFiles,
   Forms, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
-  FireDAC.Comp.DataSet;
+  FireDAC.Comp.DataSet,Vcl.Dialogs;
 
 type
   TConDBIni = record
@@ -83,13 +83,22 @@ begin
   if not Assigned(DataModel) then
     Exit;
 
-  DataModel.Con.Params.Clear;
-  DataModel.Con.Params.Add('DriverID=PG');
-  DataModel.Con.Params.Add('Server=' + configIni.SerEnder);
-  DataModel.Con.Params.Add('Database=' + configIni.DBName);
-  DataModel.Con.Params.Add('Port=' + IntToStr(configIni.DBPorta));
-  DataModel.Con.Params.Add('User_Name=' + configIni.DBUser);
-  DataModel.Con.Params.Add('Password=' + configIni.DBPass);
-  DataModel.Con.Connected := True;
+  try
+    DataModel.Con.Params.Clear;
+    DataModel.Con.Params.Add('DriverID=PG');
+    DataModel.Con.Params.Add('Server=' + configIni.SerEnder);
+    DataModel.Con.Params.Add('Database=' + configIni.DBName);
+    DataModel.Con.Params.Add('Port=' + IntToStr(configIni.DBPorta));
+    DataModel.Con.Params.Add('User_Name=' + configIni.DBUser);
+    DataModel.Con.Params.Add('Password=' + configIni.DBPass);
+    DataModel.Con.Connected := True;
+
+     ShowMessage('Conectado com sucesso');
+  except
+    on E: EDatabaseError do
+      ShowMessage('Erro ao conectar ao banco de dados: ' + E.Message);
+    on E: Exception do
+      ShowMessage('Erro inesperado: ' + E.Message);
+  end;
 end;
 end.

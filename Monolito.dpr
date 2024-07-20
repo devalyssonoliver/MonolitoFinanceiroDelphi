@@ -15,9 +15,9 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Windows10');
-  Application.CreateForm(TfrmConfigDB, frmConfigDB);
-  Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TDataModel, DataModel);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmConfigDB, frmConfigDB);
   Application.CreateForm(TfrmClientes, frmClientes);
   Application.Run;
 end.
