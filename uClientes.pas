@@ -12,7 +12,8 @@ uses
   Vcl.ControlList, Vcl.CustomizeDlg, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, uConexaoModulo, Vcl.ComCtrls, XDBGrids;
+  FireDAC.Comp.Client, uConexaoModulo, Vcl.ComCtrls, XDBGrids, frxSmartMemo,
+  frxClass, frxDBSet, frCoreClasses;
 
 type
   TfrmClientes = class(TForm)
@@ -44,8 +45,11 @@ type
     FDQuery1telefone: TWideStringField;
     FDQuery1bairro: TWideStringField;
     FDTable: TFDTable;
+    RelClientes: TfrxReport;
+    relDataSet: TfrxDBDataset;
     procedure LimparCampos(Edit1, Edit2: TEdit);
     procedure PraButtonStyle3Click(Sender: TObject);
+    procedure PraButtonStyle1Click(Sender: TObject);
 
     // Private declarations
   public
@@ -63,6 +67,11 @@ procedure TfrmClientes.LimparCampos(Edit1, Edit2: TEdit);
 begin
   Edit1.Clear;
   Edit2.Clear;
+end;
+
+procedure TfrmClientes.PraButtonStyle1Click(Sender: TObject);
+begin
+  RelClientes.ShowReport;
 end;
 
 procedure TfrmClientes.PraButtonStyle3Click(Sender: TObject);
